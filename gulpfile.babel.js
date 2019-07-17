@@ -91,9 +91,7 @@ const js = () =>
     .pipe(gulp.dest(routes.js.dest));
 
 const prepare = gulp.series([clean, img]);
-
 const assets = gulp.series([pug, styles, js]);
-
 const postDev = gulp.parallel([webserver, watch]);
 
 export const build = gulp.series([prepare, assets]);
